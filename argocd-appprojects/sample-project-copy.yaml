@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
-  name: gitops-project
+  name: gitops-project-v2
   namespace: argocd
 spec:
   clusterResourceWhitelist:
   - group: '*'
     kind: '*'
   destinations:
-  - namespace: gitops-app
+  - namespace: gitops-app-v2
     server: https://kubernetes.default.svc
   orphanedResources:
     warn: false
